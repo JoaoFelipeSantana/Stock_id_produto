@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+header{
+    background-color: #0099DD;
+    height: 80px;
+    display: flex;
+    width: 100vw;
+    border-bottom: #ff9933 5px solid;
+}
+
+.titulo P{
+    font-size: 55px;
+    color: #ffffff;
+    
+}
+.titulo{
+    display: flex;
+    margin-left: 30%;
+    align-items: center ;
+    gap: 15px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pesquisa {
+    margin: auto;
+}
+
+.pesquisar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+    width: 29vw;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pesquisar img {
+    width: 30px; 
+}
+
+.pesquisar input {
+    width: 80%; 
+    padding-left: 10px;
+    height: 40px;
+    border: none;
+    background-color: #D9D9D9;
+    color: black;
+    outline: none;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#botoes{
+    display: flex;
+    gap: 20%;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+
+#bot:hover, #bot2:hover{
+    background-color: #ff9933;
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 10px #ff9933;
+}
+
+#bot:hover img,
+#bot2:hover img,
+#cadastrar:hover img,
+#cancelar:hover img,
+#cancelar2:hover img,
+#selecionar:hover img,
+#editar:hover img,
+#deletar:hover img {
+    filter: brightness(0) invert(1);
+}
+
+#bot, #bot2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    border:#ff9933 5px solid;
+    color: #ff9933;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 5px 20px;
+    width: 275px;
+    height: 75px;
+}
+
+#bot img, #bot2 img {
+    width: 55px;
+    height: 55px;
+}
+
+#bot {
+    font-size: 25px;
+}
+
+#bot2 {
+    font-size: 28px;
+}
+
+#janela_popup, #janela, #popup_edicao{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.form {
+    background-color: #DAEBF2; 
+    padding: 10px 15px; 
+    border-radius: 15px; 
+    border: #0099DD 5px solid;
+    font-size: 24px;
+    margin: auto;
+    height: 90vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 53vw;
+}
+
+.icon img{
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+    width: 75px;
+    height: 75px;
+}
+
+.form input, .form select {
+    text-indent: 20px;
+    line-height: 35px;
+    border-radius: 30px; 
+    border: #0099DD 5px solid;
+    color:#263672;
+    font-weight: 600;
+    font-size: 28px;
+    outline: none;
+}
+
+form {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form label{
+    text-indent: 20px;
+    font-size: 28px;
+    color:#0099DD;
+}
+
+input[type="date"] {
+    text-indent: 10px;
+}
+.form .line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form .line input, .form .line select {
+    width: 350px;
+}
+
+.form #completo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form #curto{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.botoescad, .botoescat{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 5px;
+    flex-direction: row-reverse;
+}
+
+
+.botoescad button{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    background-color:white; 
+    border: 5px solid;
+    border-radius: 15px; 
+    cursor: pointer;
+    font-size: 24px;
+    height: 70px;
+    font-weight: bold;
+    width: 35%;
+    margin-top: 15px;
+}
+
+.botoescad button img {
+    width: 40px;
+    height: 40px;
+}
+
+.botoescat button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color:white; 
+    border: 5px solid;
+    border-radius: 15px; 
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    width: 42%;
+    margin-bottom: 25px;
+}
+
+.botoescat button img {
+    width: 40px;
+    height: 40px;
+}
+
+.botoescad #cadastrar, .botoescad #editar{
+    background-color: #ffffff;
+    color: #ff9933;
+}
+
+#cancelar, #cancelar2, #deletar{
+    background-color: #ffffff;
+    color: #dd0000;
+}
+
+.botoescat #selecionar{
+    background-color: #ffffff;
+    color: #32f321;
+}
+
+.botoescad, .botoescat img{
+    margin-left: 5px;
+}
+
+#cadastrar:hover, #editar:hover {
+    background-color: #ff8500;
+    color: #ffffff;
+    border:#ff8500 5px solid;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 10px ;
+}
+
+#cancelar:hover, #cancelar2:hover, #deletar:hover {
+    background-color: #dd0000;
+    color: #ffffff;
+    border:#dd0000 5px solid;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 10px ;
+}
+
+#selecionar:hover{
+    background-color: #32f321;
+    color: #ffffff;
+    border:#32f321 5px solid;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 10px ;
+}
+
+.popupcat{
+    background-color: #DAEBF2;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border: #0099dd 5px solid;
+    border-radius: 20px;
+    position: relative;
+    top: 120px;
+    z-index: 11000;
+}
+
+
+.barra{
+    display: flex;
+    gap: 10px;
+    width: 20vw;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding-left: 15px;
+}
+
+.barra input{
+    width: 80%;
+    font-size: 24px;
+    height: 40px;   
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.pesquisar::placeholder{
+    font-size: 25px;
+    font-weight: bold;
+    align-items: center;
+    color: #062068;
+}
+
+.imagens{
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+figcaption{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #062068;
+    
+}
+
+.imagens img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: #ff9933 2px solid;
+}
+
+
+
+
+#lista {
+    width: 95vw;
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+.listagem{
+    margin-top: 10px;
+    display: block;
+    background-color: #0099DD;
+    border-radius: 15px;
+    border: #ff9933 5px solid;
+    padding-top: 10px;
+    padding-right: 30px;
+    height: 50vh;
+}
+
+.codigo, .descricao {
+    width: 10%;
+}
+
+.nome, .categoria, .quantidade {
+    width: 20%;
+}
+
+
+.descricoes{
+    font-size: 28px;
+    color: #263672;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    text-align: center;
+    padding-right: 50px;
+    align-items: center;
+}
+
+.registro{
+    font-size: 28px;
+    color: #ffffff;
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-evenly;
+    gap: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+
+#btn_mais svg {
+    width: 50px;
+    height: 50px;
+}
+
+#btn_mais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ff9933;
+    background-color: #ffffff;
+    color: #ff9933;
+    padding: 2px;
+    margin-right: 20px;
+}
+
+#btn_mais:hover {
+    color: #ffffff;
+    background-color: #ff9933;
+    border-color: #ff9933;
+    transform: scale(1.10);
+    transition-duration: 150ms;
+    box-shadow: 2px 2px 5px #E07000;
+}
+
+#titulo_editar {
+    color: #0099dd;
+    margin: 10px 0;
+}
+
+
